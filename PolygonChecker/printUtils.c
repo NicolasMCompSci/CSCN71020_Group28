@@ -8,7 +8,8 @@
 // 
 // Implementation for print utilities
 
-void printWelcome() {
+void printWelcome()
+{
 	printf_s("\n");
 	printf_s(" **********************\n");
 	printf_s("**     Welcome to     **\n");
@@ -16,14 +17,12 @@ void printWelcome() {
 	printf_s(" **********************\n");
 }
 
-int printShapeMenu() {
+void printShapeMenu()
+{
+	printf_s("Select an option from below\n");
 	printf_s("1. Triangle\n");
+	printf_s("2. Rectangle\n");
 	printf_s("0. Exit\n");
 
-	int shapeChoice;
-
 	printf_s("Enter number: ");
-	scanf_s("%1o", &shapeChoice);
-
-	return shapeChoice;
 }

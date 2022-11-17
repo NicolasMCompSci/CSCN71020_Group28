@@ -6,4 +6,4 @@
 // Interface for print utilities
 
 void printWelcome();
-int printShapeMenu();
+void printShapeMenu();

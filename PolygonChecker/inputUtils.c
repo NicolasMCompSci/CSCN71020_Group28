@@ -7,7 +7,18 @@
 // 
 // Implementation for input utilities
 
-int* getTriangleSides(int* triangleSides) {
+bool GetIntInput(int* tempInput)
+{
+	// checks if input counts as an integer type, if not this will return false
+	if (scanf_s("%1d", tempInput) != 1)
+		return false;
+
+	// returns true if input was a success
+	return true;
+}
+
+int* getTriangleSides(int* triangleSides)
+{
 	printf_s("Enter the three sides of the triangle: ");
 	for (int i = 0; i < 3; i++)
 	{
