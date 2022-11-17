@@ -11,7 +11,10 @@ bool GetIntInput(int* tempInput)
 {
 	// checks if input counts as an integer type, if not this will return false
 	if (scanf_s("%1d", tempInput) != 1)
+	{
+		getchar();
 		return false;
+	}
 
 	// returns true if input was a success
 	return true;

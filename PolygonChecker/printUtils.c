@@ -19,7 +19,7 @@ void printWelcome()
 
 void printShapeMenu()
 {
-	printf_s("Select an option from below\n");
+	printf_s("\nSelect an option from below\n");
 	printf_s("1. Triangle\n");
 	printf_s("2. Rectangle\n");
 	printf_s("0. Exit\n");

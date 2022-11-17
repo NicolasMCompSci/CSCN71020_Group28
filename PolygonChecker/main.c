@@ -11,7 +11,7 @@
 int side = 0;
 
 int main()
-{
+{	
 	bool continueProgram = true;
 
 	while (continueProgram) 
@@ -20,6 +20,7 @@ int main()
 		printShapeMenu();
 
 		int shapeChoice = 0;
+		// if menu inout returns as invalid it sets the shapeChoice to the "default" case
 		if (!GetIntInput(&shapeChoice))
 			shapeChoice = HIGHEST_CASE + 1;
 
@@ -41,7 +42,6 @@ int main()
 				break;
 			default:
 				printf_s("Invalid value entered.\n");
-				continueProgram = false;
 				break;
 		}
 	}
