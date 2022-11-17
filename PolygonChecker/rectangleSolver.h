@@ -8,3 +8,5 @@
 // Interface for Rectangle Solver functions
 
 bool checkIfSquareByPoints(int, int, int, int, int, int, int, int);
+
+//char* analyzeRectangle(int side1, int side2, int side3, int side4)

@@ -6,3 +6,6 @@
 // Interface for input utilities
 
 int* getTriangleSides(int* triangleSides);
+
+
+int* getRectangleSides(int* RectangleSides);

@@ -15,3 +15,14 @@ int* getTriangleSides(int* triangleSides) {
 	}
 	return triangleSides;
 }
+
+int* getRectangleSides(int* RectangleSides)
+{
+	printf_s("Enter the four sides of the rectangle: ");
+	for (int i = 0; i < 3; i++)
+	{
+		scanf_s("%d", &RectangleSides[i]);
+	}
+	return RectangleSides;
+
+}
