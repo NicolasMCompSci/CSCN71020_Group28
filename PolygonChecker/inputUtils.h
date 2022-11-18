@@ -10,3 +10,5 @@
 bool GetIntInput(int*);
 
 int* getTriangleSides(int* triangleSides);
+
+int* getRectangleSides(int* RectangleSides);
