@@ -10,7 +10,7 @@
 bool GetIntInput(int* tempInput)
 {
 	// checks if input counts as an integer type, if not this will return false
-	if (scanf_s("%1d", tempInput) != 1)
+	if (scanf_s("%d", tempInput) != 1)
 	{
 		getchar();
 		return false;
@@ -23,9 +23,15 @@ bool GetIntInput(int* tempInput)
 int* getTriangleSides(int* triangleSides)
 {
 	printf_s("Enter the three sides of the triangle: ");
+
 	for (int i = 0; i < 3; i++)
 	{
-		scanf_s("%d", &triangleSides[i]);
+		if (!GetIntInput(&triangleSides[i]))
+		{
+			triangleSides[i] = 0;
+			printf_s("Ivalid Input.\n");
+		}
 	}
+
 	return triangleSides;
 }
