@@ -36,13 +36,17 @@ int* getTriangleSides(int* triangleSides)
 	return triangleSides;
 }
 
-int* getRectangleSides(int* RectangleSides)
+int* getRectangleSides(int* rectangleSides)
 {
 	printf_s("Enter the four sides of the rectangle: ");
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 4; i++)
 	{
-		scanf_s("%d", &RectangleSides[i]);
+		if (!GetIntInput(rectangleSides[i]))
+		{
+			rectangleSides[i] = 0;
+			printf_s("Ivalid Input.\n");
+		}
 	}
-	return rectangleSides;
 
+	return rectangleSides;
 }
