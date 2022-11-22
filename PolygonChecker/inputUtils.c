@@ -43,6 +43,6 @@ int* getRectangleSides(int* RectangleSides)
 	{
 		scanf_s("%d", &RectangleSides[i]);
 	}
-	return RectangleSides;
+	return rectangleSides;
 
 }
