@@ -7,22 +7,51 @@
 // 
 // Implementation for input utilities
 
-int* getTriangleSides(int* triangleSides) {
+bool GetIntInput(int* tempInput)
+{
+	// checks if input counts as an integer type, if not this will return false
+	if (scanf_s("%d", tempInput) != 1)
+	{
+		getchar();
+		return false;
+	}
+
+	// returns true if input was a success
+	return true;
+}
+
+int* getTriangleSides(int* triangleSides)
+{
 	printf_s("Enter the three sides of the triangle: ");
+
 	for (int i = 0; i < 3; i++)
 	{
-		scanf_s("%d", &triangleSides[i]);
+		if (!GetIntInput(&triangleSides[i]))
+		{
+			triangleSides[i] = 0;
+			printf_s("Ivalid Input.\n");
+		}
 	}
+
 	return triangleSides;
 }
 
-int* getRectangleSides(int* RectangleSides)
+int* getRectangleSides(int* rectangleSides)
 {
 	printf_s("Enter the four sides of the rectangle: ");
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 4; i++)
 	{
-		scanf_s("%d", &RectangleSides[i]);
+		if (!GetIntInput(rectangleSides[i]))
+		{
+			rectangleSides[i] = 0;
+			printf_s("Ivalid Input.\n");
+		}
 	}
-	return RectangleSides;
+
+	return rectangleSides;
+}
+
+POINT* getRectanglePoints(int size)
+{
 
 }

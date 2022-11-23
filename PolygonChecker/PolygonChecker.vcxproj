@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClInclude Include="inputUtils.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="pointADT.h" />
     <ClInclude Include="printUtils.h" />
     <ClInclude Include="rectangleSolver.h" />
     <ClInclude Include="triangleSolver.h" />

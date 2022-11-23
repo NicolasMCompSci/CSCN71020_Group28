@@ -47,5 +47,8 @@
     <ClInclude Include="inputUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="pointADT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
