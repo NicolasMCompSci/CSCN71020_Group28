@@ -1,4 +1,5 @@
 #pragma once
+#include "pointADT.h"
 
 #include <stdbool.h>
 
@@ -12,3 +13,5 @@ bool GetIntInput(int*);
 int* getTriangleSides(int* triangleSides);
 
 int* getRectangleSides(int* RectangleSides);
+
+POINT* getRectanglePoints(int size);

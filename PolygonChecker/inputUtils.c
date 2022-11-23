@@ -50,3 +50,8 @@ int* getRectangleSides(int* rectangleSides)
 
 	return rectangleSides;
 }
+
+POINT* getRectanglePoints(int size)
+{
+
+}

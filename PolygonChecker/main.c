@@ -4,6 +4,7 @@
 #include "inputUtils.h"
 #include "printUtils.h"
 #include "triangleSolver.h"
+#include "pointADT.h"
 #include "rectangleSolver.h"
 
 #define HIGHEST_CASE 2
@@ -35,6 +36,10 @@ int main()
 				break;
 			case 2:
 				printf_s("Rectangle Selected.\n");
+				POINT points[4] = getRectanglePoints(4);
+				// gets result, needs updated functions using POINT adt array.
+				// char* result = getRectangleResultForPrint(checkIfRectangleByPoints(points[1], points[2], points[3], points[4]));
+				printf_s("%s\n", result);
 				break;
 			case 0:
 				continueProgram = false;

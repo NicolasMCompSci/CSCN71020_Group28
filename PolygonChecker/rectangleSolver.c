@@ -8,13 +8,25 @@
 // 
 // Implementation for Rectangle Solver functions
 
-bool checkIfSquareByPoints(int pointOneX, int pointOneY, int pointTwoX, int pointTwoY, int pointThreeX, int pointThreeY, int pointFourX, int pointFourY)
+bool checkIfRectangleByPoints(int pointOneX, int pointOneY, int pointTwoX, int pointTwoY, int pointThreeX, int pointThreeY, int pointFourX, int pointFourY)
 {
 	// this only works if point 1 is bottom left point point 2 is top left, point 3 top right, point 4 bottom right
 	if (pointOneX != pointTwoX || pointTwoY != pointThreeY || pointThreeX != pointFourX || pointFourY != pointOneY)
 		return false;
 	else
 		return true;
+}
+
+char* getRectangleResultForPrint(bool isRectangle)
+{
+	char* result = "";
+
+	if (isRectangle)
+		result = "Rectangle";
+	else
+		result = "Not a rectangle";
+
+	return result;
 }
 
 
