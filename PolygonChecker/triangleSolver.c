@@ -6,6 +6,7 @@
 
 #define NUMOFTRIANGLEANGLES 3
 #define PI 3.14159265359
+#define HALFCIRCLE 180
 
 char* analyzeTriangle(int side1, int side2, int side3)
 {
@@ -31,7 +32,7 @@ char* analyzeTriangle(int side1, int side2, int side3)
 
 double radiansToDegrees(double degrees)
 {
-	return degrees * 180 / PI;
+	return degrees * HALFCIRCLE / PI;
 }
 
 double getTriangleAngles(int triSides[], int i)
