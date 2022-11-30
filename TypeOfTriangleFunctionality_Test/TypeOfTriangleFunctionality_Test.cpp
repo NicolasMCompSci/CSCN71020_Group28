@@ -75,14 +75,14 @@ namespace TypeOfTriangleFunctionalityTest
 
 		TEST_METHOD(Scalene_Test02)
 		{
-			// tests the analyzing function using 1 2 3, which should result in a "Scalene triangle" result
+			// tests the analyzing function using 3 2 1, which should result in a "Scalene triangle" result
 			char* result = analyzeTriangle(3, 2, 1);
 			Assert::AreEqual("Scalene triangle", result);
 		}
 
 		TEST_METHOD(Scalene_Test03)
 		{
-			// tests the analyzing function using 1 2 3, which should result in a "Scalene triangle" result
+			// tests the analyzing function using 2 3 1, which should result in a "Scalene triangle" result
 			char* result = analyzeTriangle(2, 3, 1);
 			Assert::AreEqual("Scalene triangle", result);
 		}
