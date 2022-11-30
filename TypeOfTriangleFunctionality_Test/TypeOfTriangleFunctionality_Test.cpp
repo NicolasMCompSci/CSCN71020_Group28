@@ -8,55 +8,55 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 namespace TypeOfTriangleFunctionalityTest
 {
 	// test for "type of triangle" functionality if it is an Equilateral triangle
-	TEST_CLASS(EquilateralFunctionalTest)
+	TEST_CLASS(EquilateralTests)
 	{
 	public:
 		
 		TEST_METHOD(Equilateral_FunctionalTest01)
 		{
-			// functional tests the analyzing function using 1 1 1, which should result in an "Equilateral triangle" result
+			// functional test for the analyzing function using 1 1 1, which should result in an "Equilateral triangle" result
 			char* result = analyzeTriangle(1, 1, 1);
 			Assert::AreEqual("Equilateral triangle", result);
 		}
 
 		TEST_METHOD(Equilateral_FunctionalTest02)
 		{
-			// functional tests the analyzing function using 1 1 1, which should result in an "Equilateral triangle" result
-			char* result = analyzeTriangle(1, 1, 1);
+			// functional test for the analyzing function using 231 231 231, which should result in an "Equilateral triangle" result
+			char* result = analyzeTriangle(231, 231, 231);
 			Assert::AreEqual("Equilateral triangle", result);
 		}
 
 		TEST_METHOD(Equilateral_BoundaryTest01)
 		{
-			// boundary tests the analyzing function using 2147483647 2147483647 2147483647, which should result in an "Equilateral triangle" result
+			// boundary test for the analyzing function using 2147483647 2147483647 2147483647, which should result in an "Equilateral triangle" result
 			char* result = analyzeTriangle(2147483647, 2147483647, 2147483647);
 			Assert::AreEqual("Equilateral triangle", result);
 		}
 	};
 
-	// Functional test for "type of triangle" functionality if it is an Isosceles triangle
+	// tests for "type of triangle" functionality if it is an Isosceles triangle
 	TEST_CLASS(IsoscelesFunctionalTest)
 	{
 	public:
 
 		TEST_METHOD(Isosceles_Test01)
 		{
-			// tests the analyzing function using 1 2 2, which should result in an "Isosceles triangle" result
+			// functional test for the analyzing function using 1 2 2, which should result in an "Isosceles triangle" result
 			char* result = analyzeTriangle(1, 2, 2);
 			Assert::AreEqual("Isosceles triangle", result);
 		}
 
 		TEST_METHOD(Isosceles_Test02)
 		{
-			// tests the analyzing function using 2 1 2, which should result in an "Isosceles triangle" result
-			char* result = analyzeTriangle(2, 1, 2);
+			// functional test for the analyzing function using 100 5 100, which should result in an "Isosceles triangle" result
+			char* result = analyzeTriangle(100, 5, 100);
 			Assert::AreEqual("Isosceles triangle", result);
 		}
 
 		TEST_METHOD(Isosceles_Test03)
 		{
-			// tests the analyzing function using 2 2 1, which should result in an "Isosceles triangle" result
-			char* result = analyzeTriangle(2, 2, 1);
+			// functional test for the analyzing function using 3627 10000 3627, which should result in an "Isosceles triangle" result
+			char* result = analyzeTriangle(3627, 10000, 3627);
 			Assert::AreEqual("Isosceles triangle", result);
 		}
 	};
@@ -68,35 +68,42 @@ namespace TypeOfTriangleFunctionalityTest
 
 		TEST_METHOD(Scalene_Test01)
 		{
-			// tests the analyzing function using 1 2 3, which should result in a "Scalene triangle" result
+			// functional test for the analyzing function using 1 2 3, which should result in a "Scalene triangle" result
 			char* result = analyzeTriangle(1, 2, 3);
 			Assert::AreEqual("Scalene triangle", result);
 		}
 
 		TEST_METHOD(Scalene_Test02)
 		{
-			// tests the analyzing function using 3 2 1, which should result in a "Scalene triangle" result
-			char* result = analyzeTriangle(3, 2, 1);
+			// functional test for the analyzing function using 19023 123 25, which should result in a "Scalene triangle" result
+			char* result = analyzeTriangle(19023, 123, 25);
 			Assert::AreEqual("Scalene triangle", result);
 		}
 
 		TEST_METHOD(Scalene_Test03)
 		{
-			// tests the analyzing function using 2 3 1, which should result in a "Scalene triangle" result
-			char* result = analyzeTriangle(2, 3, 1);
+			// functional test for the analyzing function using 93032 2147483647 5, which should result in a "Scalene triangle" result
+			char* result = analyzeTriangle(93032, 2147483647, 5);
 			Assert::AreEqual("Scalene triangle", result);
 		}
 	};
 
 	// Exception test for "type of triangle" functionality in the case input is not a triangle
-	TEST_CLASS(TypeOfTriangleExceptionTest)
+	TEST_CLASS(ExceptionTest)
 	{
 	public:
 
 		TEST_METHOD(Exception_Test01)
 		{
-			// tests the analyzing function using -1 1 1, which should result in a "Not a triangle" result
+			// Exception test for the analyzing function using -1 1 1, which should result in a "Not a triangle" result
 			char* result = analyzeTriangle(-1, 1, 1);
+			Assert::AreEqual("Not a triangle", result);
+		}
+
+		TEST_METHOD(Exception_Test02)
+		{
+			// Exception test for the analyzing function using 1 2147483648 1, which should result in a "Not a triangle" result
+			char* result = analyzeTriangle(1, 2147483648, 1);
 			Assert::AreEqual("Not a triangle", result);
 		}
 	};
