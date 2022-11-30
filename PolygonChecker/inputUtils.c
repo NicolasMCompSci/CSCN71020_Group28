@@ -53,5 +53,33 @@ int* getRectangleSides(int* rectangleSides)
 
 POINT* getRectanglePoints(int size)
 {
+	//Zavere 
+	// 
+	//bool FindPoint(int x1, int y1, int x2, int y2, int x, int y)
+	//{
+	//	if (x > x1 && x < x2 && y > y1 && y < y2)
+	//		return true;
+
+	//	return false;
+	//}
+
+
+	//int main()
+	//{
+	//	// bottom-left and top-right
+	//	// corners of rectangle
+	//	int x1 = 0, y1 = 0, x2 = 10, y2 = 8;
+
+	//	// given points
+	//	int x = 1, y = 5;
+
+	//	// function call
+	//	if (FindPoint(x1, y1, x2, y2, x, y))
+	//		printf("Yes");
+	//	else
+	//		printf("No");
+
+	//	return 0;
+	//}
 
 }
