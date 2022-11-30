@@ -12,7 +12,7 @@
 int side = 0;
 
 int main()
-{	
+{
 	bool continueProgram = true;
 
 	while (continueProgram) 
@@ -36,10 +36,24 @@ int main()
 				break;
 			case 2:
 				printf_s("Rectangle Selected.\n");
-				POINT points[4] = getRectanglePoints(4);
+				POINT points[4];
+				//points = getRectanglePoints(4);
 				// gets result, needs updated functions using POINT adt array.
-				// char* result = getRectangleResultForPrint(checkIfRectangleByPoints(points[1], points[2], points[3], points[4]));
-				printf_s("%s\n", result);
+				// bool isRectangle = checkIfRectangleByPoints(points[1], points[2], points[3], points[4]);
+				// char* result = getRectangleResultForPrint(isRectangle);
+				float sideLengths[4];
+				getRectangleSidesFromPoints(&sideLengths, points, 4);
+				float perimeter = getFloatPerimeterFromSides(sideLengths, 4);
+				// prints results
+				//printf_s("%s\n Perimeter: %f units\n", result, perimeter);
+
+				// gets area of rectangle and prints area shape is a rectangle
+				//if (isRectangle)
+				//{
+					//float area = getRectangleArea(sideLengths, 2);
+					//printf_s("Area: %f units squared\n", area);
+				//}
+				
 				break;
 			case 0:
 				continueProgram = false;
