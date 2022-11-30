@@ -1,4 +1,5 @@
 #pragma once
+#include "pointADT.h"
 
 #include <stdbool.h>
 
@@ -9,5 +10,10 @@
 
 bool checkIfRectangleByPoints(int, int, int, int, int, int, int, int);
 
+void getRectangleSidesFromPoints(float[], POINT[], int);
+float getFloatPerimeterFromSides(float[], int);
+float getRectangleArea(float[], int);
+
 char* getRectangleResultForPrint(bool);
+
 //char* analyzeRectangle(int side1, int side2, int side3, int side4)
