@@ -12,7 +12,7 @@ bool GetIntInput(int* tempInput)
 	// checks if input counts as an integer type, if not this will return false
 	if (scanf_s("%d", tempInput) != 1)
 	{
-		getchar();
+		int dump = getchar();
 		return false;
 	}
 

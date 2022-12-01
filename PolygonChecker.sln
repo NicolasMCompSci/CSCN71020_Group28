@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PolygonChecker", "PolygonCh
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TypeOfTriangleFunctionality_Test", "TypeOfTriangleFunctionality_Test\TypeOfTriangleFunctionality_Test.vcxproj", "{2F6C1E4D-C0EE-46B7-8D84-C7D4C3799AF6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FourPointsFunctionality_Test", "FourPointsFunctionality_Test\FourPointsFunctionality_Test.vcxproj", "{159F20B2-194D-4C47-A598-D4993C70E34F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{2F6C1E4D-C0EE-46B7-8D84-C7D4C3799AF6}.Release|x64.Build.0 = Release|x64
 		{2F6C1E4D-C0EE-46B7-8D84-C7D4C3799AF6}.Release|x86.ActiveCfg = Release|Win32
 		{2F6C1E4D-C0EE-46B7-8D84-C7D4C3799AF6}.Release|x86.Build.0 = Release|Win32
+		{159F20B2-194D-4C47-A598-D4993C70E34F}.Debug|x64.ActiveCfg = Debug|x64
+		{159F20B2-194D-4C47-A598-D4993C70E34F}.Debug|x64.Build.0 = Debug|x64
+		{159F20B2-194D-4C47-A598-D4993C70E34F}.Debug|x86.ActiveCfg = Debug|Win32
+		{159F20B2-194D-4C47-A598-D4993C70E34F}.Debug|x86.Build.0 = Debug|Win32
+		{159F20B2-194D-4C47-A598-D4993C70E34F}.Release|x64.ActiveCfg = Release|x64
+		{159F20B2-194D-4C47-A598-D4993C70E34F}.Release|x64.Build.0 = Release|x64
+		{159F20B2-194D-4C47-A598-D4993C70E34F}.Release|x86.ActiveCfg = Release|Win32
+		{159F20B2-194D-4C47-A598-D4993C70E34F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
