@@ -8,6 +8,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace FourPointsFunctionalityTest
 {
+	// test cases for "4 point" functionality
 	TEST_CLASS(FourPointsFunctionalityTest)
 	{
 	public:
