@@ -8,7 +8,7 @@
 // 
 // Interface for Rectangle Solver functions
 
-bool checkIfRectangleByPoints(int, int, int, int, int, int, int, int);
+bool checkIfRectangleByPoints(POINT, POINT, POINT, POINT);
 
 void getRectangleSidesFromPoints(float[], POINT[], int);
 float getFloatPerimeterFromSides(float[], int);
