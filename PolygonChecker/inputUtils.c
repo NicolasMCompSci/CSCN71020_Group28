@@ -20,6 +20,7 @@ bool GetIntInput(int* tempInput)
 	return true;
 }
 
+// outdated function, not usable since it doesn't fit our requirements
 int* getTriangleSides(int* triangleSides)
 {
 	printf_s("Enter the three sides of the triangle: ");
@@ -41,7 +42,7 @@ int* getRectangleSides(int* rectangleSides)
 	printf_s("Enter the four sides of the rectangle: ");
 	for (int i = 0; i < 4; i++)
 	{
-		if (!GetIntInput(rectangleSides[i]))
+		if (!GetIntInput(&rectangleSides[i]))
 		{
 			rectangleSides[i] = 0;
 			printf_s("Ivalid Input.\n");
@@ -81,5 +82,5 @@ POINT* getRectanglePoints(int size)
 
 	//	return 0;
 	//}
-
+	return NULL;
 }

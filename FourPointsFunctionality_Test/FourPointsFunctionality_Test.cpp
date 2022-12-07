@@ -49,10 +49,10 @@ namespace FourPointsFunctionalityTest
 		TEST_METHOD(Boundary01)
 		{
 			// tests values for biggest possible rectangle
-			POINT first; first.x = -2147483648; first.y = -2147483648;
-			POINT second; second.x = -2147483648; second.y = 2147483647;
+			POINT first; first.x = 0 - 2147483648; first.y = 0 - 2147483648;
+			POINT second; second.x = 0 - 2147483648; second.y = 2147483647;
 			POINT third; third.x = 2147483647; third.y = 2147483647;
-			POINT fourth; fourth.x = 2147483647; fourth.y = -2147483648;
+			POINT fourth; fourth.x = 2147483647; fourth.y = 0 - 2147483648;
 			bool result = checkIfRectangleByPoints(first, second, third, fourth);
 			Assert::AreEqual(true, result);
 		}
