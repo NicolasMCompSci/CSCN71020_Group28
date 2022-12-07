@@ -55,32 +55,29 @@ int* getRectangleSides(int* rectangleSides)
 POINT* getRectanglePoints(int size)
 {
 	//Zavere 
-	// 
-	//bool FindPoint(int x1, int y1, int x2, int y2, int x, int y)
-	//{
-	//	if (x > x1 && x < x2 && y > y1 && y < y2)
-	//		return true;
+	int main()
 
-	//	return false;
-	//}
+	int i, j;
+	int x[4], y[4];
+	float d1, d2, d3, d4;
+	float peri, area;
 
+	printf(" Enter your Points Below in the Given Format : ");
+	printf("\nP2\t\tP3");
+	printf("\n\n");
+	printf("P1\t\tP4");
+	// Get 4 points from user
+	for (i = 0; i < 4; i++) {
+		printf("\nEnter x[%d] and y[%d]: \n", i + 1, i + 1);
+		scanf("%d%d", &x[i], &y[i]);
+	}
 
-	//int main()
-	//{
-	//	// bottom-left and top-right
-	//	// corners of rectangle
-	//	int x1 = 0, y1 = 0, x2 = 10, y2 = 8;
-
-	//	// given points
-	//	int x = 1, y = 5;
-
-	//	// function call
-	//	if (FindPoint(x1, y1, x2, y2, x, y))
-	//		printf("Yes");
-	//	else
-	//		printf("No");
-
-	//	return 0;
-	//}
-	return NULL;
+	// Validate user inputs 
+	for (i = 0; i < 4; i++) {
+		if (x[i] < 0 || y[i] < 0) {
+			printf("Invalid input, only positive values are accepted. \n");
+			return 0;
+		}
+	}
+	return 0;
 }
