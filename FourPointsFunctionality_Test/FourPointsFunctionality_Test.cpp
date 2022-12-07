@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 
-extern "C" bool checkIfRectangleByPoints(int, int, int, int, int, int, int, int);
 extern "C" typedef struct point { int x; int y; }POINT;
+extern "C" bool checkIfRectangleByPoints(POINT, POINT, POINT, POINT);
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
