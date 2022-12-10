@@ -13,7 +13,7 @@
 bool checkIfRectangleByPoints(POINT pointOne, POINT pointTwo, POINT pointThree, POINT pointFour)
 {
 	// this only works if point 1 is bottom left point point 2 is top left, point 3 top right, point 4 bottom right
-	if (pointOne.x != pointTwo.x || pointTwo.y != pointThree.y || pointThree.x != pointFour.x || pointFour.y != pointOne.y)
+	if (pointOne.x != pointTwo.x || pointTwo.y != pointThree.y || pointThree.x != pointFour.x || pointFour.y != pointOne.y || pointOne.x == 0 || pointOne.y == 0 || pointTwo.x == 0 || pointTwo.y == 0 || pointThree.x == 0 || pointThree.y == 0 || pointFour.x == 0 || pointFour.y == 0)
 		return false;
 	else
 		return true;
