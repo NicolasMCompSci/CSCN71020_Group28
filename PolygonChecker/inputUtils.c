@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "inputUtils.h"
 
 #include <stdio.h>
@@ -52,32 +53,40 @@ int* getRectangleSides(int* rectangleSides)
 	return rectangleSides;
 }
 
-POINT* getRectanglePoints(int size)
+bool getRectanglePoints(POINT* points, int size)
 {
-	//Zavere 
-	int main()
-
-	int i, j;
+	int i;
 	int x[4], y[4];
-	float d1, d2, d3, d4;
-	float peri, area;
+	bool isRectangle;
 
-	printf(" Enter your Points Below in the Given Format : ");
-	printf("\nP2\t\tP3");
-	printf("\n\n");
-	printf("P1\t\tP4");
 	// Get 4 points from user
 	for (i = 0; i < 4; i++) {
 		printf("\nEnter x[%d] and y[%d]: \n", i + 1, i + 1);
-		scanf("%d%d", &x[i], &y[i]);
+		if (!GetIntInput(&x[i]))
+		{
+			x[i] = 0;
+			printf_s("Ivalid Input.\n");
+		}
+		if (!GetIntInput(&y[i]))
+		{
+			y[i] = 0;
+			printf_s("Ivalid Input.\n");
+		}
 	}
 
-	// Validate user inputs 
+	// Validate user inputs
 	for (i = 0; i < 4; i++) {
 		if (x[i] < 0 || y[i] < 0) {
 			printf("Invalid input, only positive values are accepted. \n");
 			return 0;
 		}
 	}
-	return 0;
+
+	// Calculate the coordinates of the four corners of the rectangle
+	points[0] = (POINT){ x[0], y[0] };
+	points[1] = (POINT){ x[0] + size, y[0] };
+	points[2] = (POINT){ x[0], y[0] + size };
+	points[3] = (POINT){ x[0] + size, y[0] + size };
+
+	return points;
 }
