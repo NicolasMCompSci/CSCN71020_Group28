@@ -12,7 +12,7 @@ bool checkIfRectangleByPoints(POINT, POINT, POINT, POINT);
 
 void getRectangleSidesFromPoints(float[], POINT[], int);
 float getFloatPerimeterFromSides(float[], int);
-float getRectangleArea(float[], int);
+float getRectangleArea(float[]);
 
 char* getRectangleResultForPrint(bool);
 

@@ -49,11 +49,11 @@ int main()
 					printf_s("%s\n Perimeter: %f units\n", recResult, perimeter);
 
 					// gets area of rectangle and prints area shape is a rectangle
-					//if (isRectangle)
-					//{
-						//float area = getRectangleArea(sideLengths, 2);
-						//printf_s("Area: %f units squared\n", area);
-					//}
+					if (isRectangle)
+					{
+						float area = getRectangleArea(sideLengths);
+						printf_s("Area: %f units squared\n", area);
+					}
 				}
 				else
 					printf_s("Invalid inputs detected, quitting function.");

@@ -50,7 +50,7 @@ float getFloatPerimeterFromSides(float sideLengths[], int arrSize)
 	return perimeter;
 }
 
-float getRectangleArea(float sideLengths[], int size)
+float getRectangleArea(float sideLengths[])
 {
 	// returns the product between the first and second side lengths
 	return sideLengths[0] * sideLengths[1];
