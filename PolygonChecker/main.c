@@ -33,6 +33,13 @@ int main()
 				int* triangleSidesPtr = getTriangleSides(triangleSides);
 				char* triResult = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
 				printf_s("%s\n", triResult);
+				if (triangleSidesPtr[0] > 0 && triangleSidesPtr[1] > 0 && triangleSidesPtr[2])
+				{
+					double triangleAngles[3] = { 0,0,0 };
+					assignTriangleAngles(triangleSidesPtr, triangleAngles);
+					printf_s("Triangle inside angles: %f degrees, %f degrees, %f degrees", triangleAngles[0], triangleAngles[1], triangleAngles[2]);
+				}
+				printf_s("\n");
 				break;
 			case 2:
 				printf_s("Rectangle Selected.\n");
@@ -46,7 +53,7 @@ int main()
 					getRectangleSidesFromPoints(sideLengths, points, 4);
 					float perimeter = getFloatPerimeterFromSides(sideLengths, 4);
 					// prints results
-					printf_s("%s\n Perimeter: %f units\n", recResult, perimeter);
+					printf_s("%s\nPerimeter: %f units\n", recResult, perimeter);
 
 					// gets area of rectangle and prints area shape is a rectangle
 					if (isRectangle)
