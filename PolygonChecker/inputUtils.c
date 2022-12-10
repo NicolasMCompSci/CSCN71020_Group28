@@ -53,15 +53,25 @@ int* getRectangleSides(int* rectangleSides)
 	return rectangleSides;
 }
 
-POINT* getRectanglePoints(int size) {
+bool getRectanglePoints(POINT* points, int size)
+{
 	int i;
 	int x[4], y[4];
-	POINT points[4];
+	bool isRectangle;
 
 	// Get 4 points from user
 	for (i = 0; i < 4; i++) {
 		printf("\nEnter x[%d] and y[%d]: \n", i + 1, i + 1);
-		scanf("%d%d", &x[i], &y[i]);
+		if (!GetIntInput(&x[i]))
+		{
+			x[i] = 0;
+			printf_s("Ivalid Input.\n");
+		}
+		if (!GetIntInput(&y[i]))
+		{
+			y[i] = 0;
+			printf_s("Ivalid Input.\n");
+		}
 	}
 
 	// Validate user inputs

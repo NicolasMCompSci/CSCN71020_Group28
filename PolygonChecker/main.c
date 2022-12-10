@@ -31,21 +31,21 @@ int main()
 				printf_s("Triangle selected.\n");
 				int triangleSides[3] = { 0, 0, 0 };
 				int* triangleSidesPtr = getTriangleSides(triangleSides);
-				char* result = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
-				printf_s("%s\n", result);
+				char* triResult = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
+				printf_s("%s\n", triResult);
 				break;
 			case 2:
 				printf_s("Rectangle Selected.\n");
-				POINT points[4];
-				//points = getRectanglePoints(4);
+				POINT* points;
+				points = getRectanglePoints(4);
 				// gets result, needs updated functions using POINT adt array.
-				// bool isRectangle = checkIfRectangleByPoints(points[1], points[2], points[3], points[4]);
-				// char* result = getRectangleResultForPrint(isRectangle);
+				bool isRectangle = checkIfRectangleByPoints(points[1], points[2], points[3], points[4]);
+				char* recResult = getRectangleResultForPrint(isRectangle);
 				float sideLengths[4];
-				getRectangleSidesFromPoints(&sideLengths, points, 4);
+				getRectangleSidesFromPoints(sideLengths, points, 4);
 				float perimeter = getFloatPerimeterFromSides(sideLengths, 4);
 				// prints results
-				//printf_s("%s\n Perimeter: %f units\n", result, perimeter);
+				printf_s("%s\n Perimeter: %f units\n", recResult, perimeter);
 
 				// gets area of rectangle and prints area shape is a rectangle
 				//if (isRectangle)
