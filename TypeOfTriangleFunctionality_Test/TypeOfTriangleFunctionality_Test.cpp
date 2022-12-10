@@ -12,6 +12,7 @@ namespace TypeOfTriangleFunctionalityTest
 	{
 	public:
 		
+		// Nicolas
 		TEST_METHOD(Equilateral_FunctionalTest01)
 		{
 			// functional test for the analyzing function using 1 1 1, which should result in an "Equilateral triangle" result
@@ -19,6 +20,7 @@ namespace TypeOfTriangleFunctionalityTest
 			Assert::AreEqual("Equilateral triangle", result);
 		}
 
+		// Nicolas
 		TEST_METHOD(Equilateral_FunctionalTest02)
 		{
 			// functional test for the analyzing function using 231 231 231, which should result in an "Equilateral triangle" result
@@ -26,6 +28,7 @@ namespace TypeOfTriangleFunctionalityTest
 			Assert::AreEqual("Equilateral triangle", result);
 		}
 
+		// Nicolas
 		TEST_METHOD(Equilateral_BoundaryTest01)
 		{
 			// boundary test for the analyzing function using 2147483647 2147483647 2147483647, which should result in an "Equilateral triangle" result
@@ -39,6 +42,7 @@ namespace TypeOfTriangleFunctionalityTest
 	{
 	public:
 
+		// Nicolas
 		TEST_METHOD(Isosceles_Test01)
 		{
 			// functional test for the analyzing function using 1 2 2, which should result in an "Isosceles triangle" result
@@ -46,6 +50,7 @@ namespace TypeOfTriangleFunctionalityTest
 			Assert::AreEqual("Isosceles triangle", result);
 		}
 
+		// Nicolas
 		TEST_METHOD(Isosceles_Test02)
 		{
 			// functional test for the analyzing function using 100 5 100, which should result in an "Isosceles triangle" result
@@ -53,6 +58,7 @@ namespace TypeOfTriangleFunctionalityTest
 			Assert::AreEqual("Isosceles triangle", result);
 		}
 
+		// Nicolas
 		TEST_METHOD(Isosceles_Test03)
 		{
 			// functional test for the analyzing function using 3627 10000 3627, which should result in an "Isosceles triangle" result
@@ -66,6 +72,7 @@ namespace TypeOfTriangleFunctionalityTest
 	{
 	public:
 
+		// Nicolas
 		TEST_METHOD(Scalene_Test01)
 		{
 			// functional test for the analyzing function using 1 2 3, which should result in a "Scalene triangle" result
@@ -73,6 +80,7 @@ namespace TypeOfTriangleFunctionalityTest
 			Assert::AreEqual("Scalene triangle", result);
 		}
 
+		// Nicolas
 		TEST_METHOD(Scalene_Test02)
 		{
 			// functional test for the analyzing function using 19023 123 25, which should result in a "Scalene triangle" result
@@ -80,6 +88,7 @@ namespace TypeOfTriangleFunctionalityTest
 			Assert::AreEqual("Scalene triangle", result);
 		}
 
+		// Nicolas
 		TEST_METHOD(Scalene_Test03)
 		{
 			// functional test for the analyzing function using 93032 2147483647 5, which should result in a "Scalene triangle" result
@@ -93,6 +102,7 @@ namespace TypeOfTriangleFunctionalityTest
 	{
 	public:
 
+		// Nicolas
 		TEST_METHOD(Exception_Test01)
 		{
 			// Exception test for the analyzing function using -1 1 1, which should result in a "Not a triangle" result
@@ -100,6 +110,7 @@ namespace TypeOfTriangleFunctionalityTest
 			Assert::AreEqual("Not a triangle", result);
 		}
 
+		// Nicolas
 		TEST_METHOD(Exception_Test02)
 		{
 			// Exception test for the analyzing function using 1 2147483648 1, which should result in a "Not a triangle" result

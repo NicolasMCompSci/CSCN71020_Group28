@@ -8,6 +8,8 @@
 // 
 // Implementation for input utilities
 
+#define RECTANGLE_SIZE 4
+
 bool GetIntInput(int* tempInput)
 {
 	// checks if input counts as an integer type, if not this will return false
@@ -53,40 +55,26 @@ int* getRectangleSides(int* rectangleSides)
 	return rectangleSides;
 }
 
-bool getRectanglePoints(POINT* points, int size)
+bool getRectanglePoints(POINT points[], int size)
 {
 	int i;
-	int x[4], y[4];
-	bool isRectangle;
+	int x[RECTANGLE_SIZE], y[RECTANGLE_SIZE];
+	bool isRectangle = true;
 
 	// Get 4 points from user
-	for (i = 0; i < 4; i++) {
+	for (i = 0; i < size; i++) {
 		printf("\nEnter x[%d] and y[%d]: \n", i + 1, i + 1);
-		if (!GetIntInput(&x[i]))
+		if (!GetIntInput(&x[i]) || !GetIntInput(&y[i]))
 		{
-			x[i] = 0;
+			isRectangle = false;
 			printf_s("Ivalid Input.\n");
-		}
-		if (!GetIntInput(&y[i]))
-		{
-			y[i] = 0;
-			printf_s("Ivalid Input.\n");
-		}
-	}
-
-	// Validate user inputs
-	for (i = 0; i < 4; i++) {
-		if (x[i] < 0 || y[i] < 0) {
-			printf("Invalid input, only positive values are accepted. \n");
-			return 0;
 		}
 	}
 
 	// Calculate the coordinates of the four corners of the rectangle
-	points[0] = (POINT){ x[0], y[0] };
-	points[1] = (POINT){ x[0] + size, y[0] };
-	points[2] = (POINT){ x[0], y[0] + size };
-	points[3] = (POINT){ x[0] + size, y[0] + size };
+	if (isRectangle)
+		for (int i = 0; i < size; i++)
+			points[i].x = x[i], points[i].y = y[i];
 
-	return points;
+	return isRectangle;
 }

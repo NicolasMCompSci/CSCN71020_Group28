@@ -68,22 +68,3 @@ char* getRectangleResultForPrint(bool isRectangle)
 
 	return result;
 }
-
-// zavere
-//char* analyzeRectangle(int side1, int side2, int side3, int side4) {   
-//	char* result = "";
-//	if (side1 <= 0 || side2 <= 0 || side3 <= 0 || side4 <= 0) {
-//		result = "Not a Rectangle";
-//	}
-//	else if ((side1 == side2 && side3 == side4) || (side1 == side2 && side3 && side4 != side1 && side2))
-//	{
-//		result = "Rectangle";
-//	}
-//
-//	else
-//	{
-//		result = "Square";
-//	}
-//
-//	return result;
-//}

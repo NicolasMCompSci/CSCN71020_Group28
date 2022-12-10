@@ -13,6 +13,7 @@ namespace FourPointsFunctionalityTest
 	{
 	public:
 		
+		// Nicolas
 		TEST_METHOD(Functional01)
 		{
 			// basic functional test with small numbers
@@ -24,6 +25,7 @@ namespace FourPointsFunctionalityTest
 			Assert::AreEqual(true , result);
 		}
 
+		// Nicolas
 		TEST_METHOD(Functional02)
 		{
 			// functional test in case rectangle is created counter-clockwise
@@ -35,6 +37,7 @@ namespace FourPointsFunctionalityTest
 			Assert::AreEqual(true, result);
 		}
 
+		// Nicolas
 		TEST_METHOD(Functional03)
 		{
 			// test when rectangle points are all negative
@@ -46,6 +49,7 @@ namespace FourPointsFunctionalityTest
 			Assert::AreEqual(true, result);
 		}
 
+		// Nicolas
 		TEST_METHOD(Boundary01)
 		{
 			// tests values for biggest possible rectangle
@@ -57,6 +61,7 @@ namespace FourPointsFunctionalityTest
 			Assert::AreEqual(true, result);
 		}
 
+		// Nicolas
 		TEST_METHOD(Exception01)
 		{
 			// exception test. first.x does not form a rectangle with other points
@@ -68,6 +73,7 @@ namespace FourPointsFunctionalityTest
 			Assert::AreEqual(false, result);
 		}
 
+		// Nicolas
 		TEST_METHOD(Exception02)
 		{
 			// checks the result if all points are the same

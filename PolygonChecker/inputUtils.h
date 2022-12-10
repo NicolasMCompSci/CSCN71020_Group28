@@ -14,4 +14,4 @@ int* getTriangleSides(int* triangleSides);
 
 int* getRectangleSides(int* RectangleSides);
 
-POINT* getRectanglePoints(int size);
+bool getRectanglePoints(POINT points[], int size);

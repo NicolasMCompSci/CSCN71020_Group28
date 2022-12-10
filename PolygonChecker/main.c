@@ -36,24 +36,27 @@ int main()
 				break;
 			case 2:
 				printf_s("Rectangle Selected.\n");
-				POINT* points;
-				points = getRectanglePoints(4);
-				// gets result, needs updated functions using POINT adt array.
-				bool isRectangle = checkIfRectangleByPoints(points[1], points[2], points[3], points[4]);
-				char* recResult = getRectangleResultForPrint(isRectangle);
-				float sideLengths[4];
-				getRectangleSidesFromPoints(sideLengths, points, 4);
-				float perimeter = getFloatPerimeterFromSides(sideLengths, 4);
-				// prints results
-				printf_s("%s\n Perimeter: %f units\n", recResult, perimeter);
+				POINT points[4] = { 0, 0, 0, 0 };
+				if (getRectanglePoints(points, 4))
+				{
+					// gets result, needs updated functions using POINT adt array.
+					bool isRectangle = checkIfRectangleByPoints(points[0], points[1], points[2], points[3]);
+					char* recResult = getRectangleResultForPrint(isRectangle);
+					float sideLengths[4];
+					getRectangleSidesFromPoints(sideLengths, points, 4);
+					float perimeter = getFloatPerimeterFromSides(sideLengths, 4);
+					// prints results
+					printf_s("%s\n Perimeter: %f units\n", recResult, perimeter);
 
-				// gets area of rectangle and prints area shape is a rectangle
-				//if (isRectangle)
-				//{
-					//float area = getRectangleArea(sideLengths, 2);
-					//printf_s("Area: %f units squared\n", area);
-				//}
-				
+					// gets area of rectangle and prints area shape is a rectangle
+					//if (isRectangle)
+					//{
+						//float area = getRectangleArea(sideLengths, 2);
+						//printf_s("Area: %f units squared\n", area);
+					//}
+				}
+				else
+					printf_s("Invalid inputs detected, quitting function.");
 				break;
 			case 0:
 				continueProgram = false;
