@@ -5,6 +5,8 @@ extern "C" void assignTriangleAngles(int triangleSides[], double triangleAngles[
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
+#define NUMOFTRIANGLESIDES 3
+
 namespace getTriangleAnglesTest
 {
 	TEST_CLASS(getTriangleAnglesTest)
@@ -13,7 +15,9 @@ namespace getTriangleAnglesTest
 		
 		TEST_METHOD(TestMethod1)
 		{
+			int triangleSides[NUMOFTRIANGLESIDES] = {1, 1, 1};
 
+			double triangleAngles[NUMOFTRIANGLESIDES];
 		}
 	};
 }

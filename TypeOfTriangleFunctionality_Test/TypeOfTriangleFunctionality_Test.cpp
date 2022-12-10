@@ -118,4 +118,65 @@ namespace TypeOfTriangleFunctionalityTest
 			Assert::AreEqual("Not a triangle", result);
 		}
 	};
+
+	TEST_CLASS(TypeOfTriangleFunctionality_Test)
+	{
+
+		//Grae
+		TEST_METHOD(GFunctional00)
+		{
+			char* result = analyzeTriangle(2, 2, 2);
+			Assert::AreEqual("Equilateral triangle", result);
+		}
+
+		//Grae
+		TEST_METHOD(GFunctional01)
+		{
+			char* result = analyzeTriangle(-2, 2, 2);
+			Assert::AreEqual("Equilateral triangle", result);
+		}
+
+		//Grae
+		TEST_METHOD(GFunctional03)
+		{
+			char* result = analyzeTriangle(2, -2, 2);
+			Assert::AreEqual("Equilateral triangle", result);
+		}
+
+		//Grae
+		TEST_METHOD(GFunctional04)
+		{
+			char* result = analyzeTriangle(2, 2, -2);
+			Assert::AreEqual("Equilateral triangle", result);
+		}
+
+		//Grae
+		TEST_METHOD(GFunctional05)
+		{
+			char* result = analyzeTriangle(-2, -2, -2);
+			Assert::AreEqual("Equilateral triangle", result);
+		}
+
+		//Grae
+		TEST_METHOD(GBoundary00)
+		{
+			char* result = analyzeTriangle(0, 2, 2);
+			Assert::AreEqual("Equilateral triangle", result);
+		}
+
+		//Grae
+		TEST_METHOD(GBoundary01)
+		{
+			char* result = analyzeTriangle(2, 0, 2);
+			Assert::AreEqual("Equilateral triangle", result);
+		}
+
+		//Grae
+		TEST_METHOD(GBoundary01)
+		{
+			char* result = analyzeTriangle(2, 2, 0);
+			Assert::AreEqual("Equilateral triangle", result);
+		}
+	};
 }
+

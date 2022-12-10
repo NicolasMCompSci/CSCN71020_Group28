@@ -84,5 +84,130 @@ namespace FourPointsFunctionalityTest
 			bool result = checkIfRectangleByPoints(first, second, third, fourth);
 			Assert::AreEqual(false, result);
 		}
+
+		// Grae
+		TEST_METHOD(GFunctional00)
+		{
+			// check if gives false to input that result in a dot
+			POINT one, two, three, four;
+
+			one.x = 4;
+			one.y = 4;
+			
+			two.x = 4;
+			two.y = 4;
+			
+			three.x = 4;
+			three.y = 4;
+			
+			four.x = 4;
+			four.y = 4;
+
+			Assert::IsFalse(checkIfRectangleByPoints(one, two, three, four));
+		}
+
+		//Grae
+		TEST_METHOD(GFunctional01)
+		{
+			// check if gives false to input that result in a line
+			POINT one, two, three, four;
+
+			one.x = 0;
+			one.y = 0;
+			
+			two.x = 0;
+			two.y = 0;
+			
+			three.x = 4;
+			three.y = 0;
+			
+			four.x = 4;
+			four.y = 0;
+
+			Assert::IsFalse(checkIfRectangleByPoints(one, two, three, four));
+		}
+
+		//Grae
+		TEST_METHOD(GFunctional02)
+		{
+			// check if gives truee to input that result in a sqaure
+			POINT one, two, three, four;
+
+			one.x = 0;
+			one.y = 0;
+			
+			two.x = 0;
+			two.y = 4;
+			
+			three.x = 4;
+			three.y = 4;
+			
+			four.x = 4;
+			four.y = 0;
+
+			Assert::IsTrue(checkIfRectangleByPoints(one, two, three, four));
+		}
+
+		//Grae
+		TEST_METHOD(GException00)
+		{
+			// check if gives true to input that result in a sqaure but points are inversed compared to norm
+			POINT one, two, three, four;
+
+			one.x = 0;
+			one.y = 0;
+
+			two.x = 0;
+			two.y = -4;
+
+			three.x = -4;
+			three.y = -4;
+
+			four.x = -4;
+			four.y = 0;
+
+			Assert::IsTrue(checkIfRectangleByPoints(one, two, three, four));
+		}
+
+		//Grae
+		TEST_METHOD(GException01)
+		{
+			// check if gives true to with negitive number input that result in a sqaure
+			POINT one, two, three, four;
+
+			one.x = -1;
+			one.y = -1;
+
+			two.x = -1;
+			two.y = 4;
+
+			three.x = 4;
+			three.y = 4;
+
+			four.x = 4;
+			four.y = -1;
+
+			Assert::IsTrue(checkIfRectangleByPoints(one, two, three, four));
+		}
+
+		TEST_METHOD(GException01)
+		{
+			// check if gives true to with negitive number input that result in a sqaure
+			POINT one, two, three, four;
+
+			one.x = -1;
+			one.y = -1;
+
+			two.x = -1;
+			two.y = 4;
+
+			three.x = 4;
+			three.y = 4;
+
+			four.x = 4;
+			four.y = -1;
+
+			Assert::IsTrue(checkIfRectangleByPoints(one, two, three, four));
+		}
 	};
 }
