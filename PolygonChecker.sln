@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TypeOfTriangleFunctionality
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FourPointsFunctionality_Test", "FourPointsFunctionality_Test\FourPointsFunctionality_Test.vcxproj", "{159F20B2-194D-4C47-A598-D4993C70E34F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "checkIfRectangleByPoints_Test", "checkIfRectangleByPoints_Test\checkIfRectangleByPoints_Test.vcxproj", "{D804EB19-E8D3-4B19-8364-74A90B9C62E4}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "getTriangleAngles_Test", "getTriangleAngles_Test\getTriangleAngles_Test.vcxproj", "{7CFEE254-9F44-44C3-A854-3418133FE445}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,14 +43,14 @@ Global
 		{159F20B2-194D-4C47-A598-D4993C70E34F}.Release|x64.Build.0 = Release|x64
 		{159F20B2-194D-4C47-A598-D4993C70E34F}.Release|x86.ActiveCfg = Release|Win32
 		{159F20B2-194D-4C47-A598-D4993C70E34F}.Release|x86.Build.0 = Release|Win32
-		{D804EB19-E8D3-4B19-8364-74A90B9C62E4}.Debug|x64.ActiveCfg = Debug|x64
-		{D804EB19-E8D3-4B19-8364-74A90B9C62E4}.Debug|x64.Build.0 = Debug|x64
-		{D804EB19-E8D3-4B19-8364-74A90B9C62E4}.Debug|x86.ActiveCfg = Debug|Win32
-		{D804EB19-E8D3-4B19-8364-74A90B9C62E4}.Debug|x86.Build.0 = Debug|Win32
-		{D804EB19-E8D3-4B19-8364-74A90B9C62E4}.Release|x64.ActiveCfg = Release|x64
-		{D804EB19-E8D3-4B19-8364-74A90B9C62E4}.Release|x64.Build.0 = Release|x64
-		{D804EB19-E8D3-4B19-8364-74A90B9C62E4}.Release|x86.ActiveCfg = Release|Win32
-		{D804EB19-E8D3-4B19-8364-74A90B9C62E4}.Release|x86.Build.0 = Release|Win32
+		{7CFEE254-9F44-44C3-A854-3418133FE445}.Debug|x64.ActiveCfg = Debug|x64
+		{7CFEE254-9F44-44C3-A854-3418133FE445}.Debug|x64.Build.0 = Debug|x64
+		{7CFEE254-9F44-44C3-A854-3418133FE445}.Debug|x86.ActiveCfg = Debug|Win32
+		{7CFEE254-9F44-44C3-A854-3418133FE445}.Debug|x86.Build.0 = Debug|Win32
+		{7CFEE254-9F44-44C3-A854-3418133FE445}.Release|x64.ActiveCfg = Release|x64
+		{7CFEE254-9F44-44C3-A854-3418133FE445}.Release|x64.Build.0 = Release|x64
+		{7CFEE254-9F44-44C3-A854-3418133FE445}.Release|x86.ActiveCfg = Release|Win32
+		{7CFEE254-9F44-44C3-A854-3418133FE445}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
