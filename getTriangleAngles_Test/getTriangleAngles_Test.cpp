@@ -14,19 +14,36 @@ namespace getTriangleAnglesTest
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		// Grae
+		TEST_METHOD(GFunctional00)
 		{
 			int triS[NUMOFTRIANGLESIDES] = {1, 1, 1};
 
 			double triA[NUMOFTRIANGLESIDES];
 
+			double expectedAngles[3] = {60, 60, 60};
+
 			assignTriangleAngles(triS, triA);
 
-			//if (triA[0] = 60)
+			Assert::AreEqual(triA[0], expectedAngles[0]);
+			Assert::AreEqual(triA[1], expectedAngles[1]);
+			Assert::AreEqual(triA[2], expectedAngles[2]);
+		}
 
-			double buffer = triA[0];
+		// Grae
+		TEST_METHOD(GFunctional01)
+		{
+			int triS[NUMOFTRIANGLESIDES] = { 2, 2, 1 };
 
-			Assert::AreEqual(buffer, 60);
+			double triA[NUMOFTRIANGLESIDES];
+
+			double expectedAngles[3] = { 28.955, 75.522, 75.522 };
+
+			assignTriangleAngles(triS, triA);
+
+			Assert::AreEqual(triA[0], expectedAngles[0]);
+			Assert::AreEqual(triA[1], expectedAngles[1]);
+			Assert::AreEqual(triA[2], expectedAngles[2]);
 		}
 
 		// Nicolas
