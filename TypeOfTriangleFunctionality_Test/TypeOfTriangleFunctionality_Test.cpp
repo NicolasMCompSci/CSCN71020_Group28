@@ -172,7 +172,7 @@ namespace TypeOfTriangleFunctionalityTest
 		}
 
 		//Grae
-		TEST_METHOD(GBoundary01)
+		TEST_METHOD(GBoundary02)
 		{
 			char* result = analyzeTriangle(2, 2, 0);
 			Assert::AreEqual("Equilateral triangle", result);
