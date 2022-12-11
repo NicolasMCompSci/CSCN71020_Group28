@@ -21,13 +21,19 @@ namespace getTriangleAnglesTest
 
 			double triA[NUMOFTRIANGLESIDES];
 
-			double expectedAngles[3] = { 60.000000000000000, 60.000000000000000, 60.000000000000000 };
+			int triAInt[NUMOFTRIANGLESIDES];
+
+			int expectedAngles[3] = { 60, 60, 60 };
 
 			assignTriangleAngles(triS, triA);
 
-			Assert::AreEqual(triA[0], expectedAngles[0]);
-			Assert::AreEqual(triA[1], expectedAngles[1]);
-			Assert::AreEqual(triA[2], expectedAngles[2]);
+			triA[0] = triAInt[0];
+			triA[1] = triAInt[1];
+			triA[2] = triAInt[2];
+
+			Assert::AreEqual(triAInt[0], expectedAngles[0]);
+			Assert::AreEqual(triAInt[1], expectedAngles[1]);
+			Assert::AreEqual(triAInt[2], expectedAngles[2]);
 		}
 
 		// Grae
