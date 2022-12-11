@@ -125,6 +125,7 @@ namespace TypeOfTriangleFunctionalityTest
 		//Grae
 		TEST_METHOD(GFunctional00)
 		{
+			// check if result = expected to input that result in "Equilateral triangle"
 			char* result = analyzeTriangle(2, 2, 2);
 			Assert::AreEqual("Equilateral triangle", result);
 		}
@@ -132,50 +133,97 @@ namespace TypeOfTriangleFunctionalityTest
 		//Grae
 		TEST_METHOD(GFunctional01)
 		{
+			// check if result = expected to input with negitive in slot 0 that result in "Not a triangle"
 			char* result = analyzeTriangle(-2, 2, 2);
-			Assert::AreEqual("Equilateral triangle", result);
+			Assert::AreEqual("Not a triangle", result);
 		}
 
 		//Grae
 		TEST_METHOD(GFunctional03)
 		{
+			// check if result = expected to input with negitive in slot 1 that result in "Not a triangle"
 			char* result = analyzeTriangle(2, -2, 2);
-			Assert::AreEqual("Equilateral triangle", result);
+			Assert::AreEqual("Not a triangle", result);
 		}
 
 		//Grae
 		TEST_METHOD(GFunctional04)
 		{
+			// check if result = expected to input with negitive in slot 2 that result in "Not a triangle"
 			char* result = analyzeTriangle(2, 2, -2);
-			Assert::AreEqual("Equilateral triangle", result);
+			Assert::AreEqual("Not a triangle", result);
 		}
 
 		//Grae
 		TEST_METHOD(GFunctional05)
 		{
-			char* result = analyzeTriangle(-2, -2, -2);
-			Assert::AreEqual("Equilateral triangle", result);
+			// check if result = expected to input that result in "Isosceles triangle"
+			char* result = analyzeTriangle(1, 2, 2);
+			Assert::AreEqual("Isosceles triangle", result);
+		}
+
+		//Grae
+		TEST_METHOD(GFunctional06)
+		{
+			// check if result = expected to input that result in "Isosceles triangle"
+			char* result = analyzeTriangle(2, 1, 2);
+			Assert::AreEqual("Isosceles triangle", result);
+		}
+
+		//Grae
+		TEST_METHOD(GFunctional07)
+		{
+			// check if result = expected to input that result in "Isosceles triangle"
+			char* result = analyzeTriangle(2, 2, 1);
+			Assert::AreEqual("Isosceles triangle", result);
+		}
+
+		//Grae
+		TEST_METHOD(GFunctional07)
+		{
+			// check if result = expected to input that result in "Scalene triangle"
+			char* result = analyzeTriangle(3, 2, 1);
+			Assert::AreEqual("Scalene triangle", result);
+		}
+
+		//Grae
+		TEST_METHOD(GFunctional07)
+		{
+			// check if result = expected to input that result in "Scalene triangle"
+			char* result = analyzeTriangle(1, 2, 3);
+			Assert::AreEqual("Scalene triangle", result);
+		}
+
+		//Grae
+		TEST_METHOD(GFunctional07)
+		{
+			// check if result = expected to input that result in "Scalene triangle"
+			char* result = analyzeTriangle(2, 3, 1);
+			Assert::AreEqual("Scalene triangle", result);
 		}
 
 		//Grae
 		TEST_METHOD(GBoundary00)
 		{
+			// check if result = expected to input with 0 in slot 0 that result in "Not a triangle"
 			char* result = analyzeTriangle(0, 2, 2);
-			Assert::AreEqual("Equilateral triangle", result);
+			Assert::AreEqual("Not a triangle", result);
 		}
 
 		//Grae
 		TEST_METHOD(GBoundary01)
 		{
+			// check if result = expected to input with 0 in slot 1 that result in "Not a triangle"
 			char* result = analyzeTriangle(2, 0, 2);
-			Assert::AreEqual("Equilateral triangle", result);
+			Assert::AreEqual("Not a triangle", result);
 		}
 
 		//Grae
-		TEST_METHOD(GBoundary01)
+		TEST_METHOD(GBoundary02)
 		{
+			// check if result = expected to input with 0 in slot 2 that result in "Not a triangle"
 			char* result = analyzeTriangle(2, 2, 0);
-			Assert::AreEqual("Equilateral triangle", result);
+			Assert::AreEqual("Not a triangle", result);
 		}
 	};
 }

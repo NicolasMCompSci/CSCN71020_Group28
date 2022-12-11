@@ -15,9 +15,17 @@ namespace getTriangleAnglesTest
 		
 		TEST_METHOD(TestMethod1)
 		{
-			int triangleSides[NUMOFTRIANGLESIDES] = {1, 1, 1};
+			int triS[NUMOFTRIANGLESIDES] = {1, 1, 1};
 
-			double triangleAngles[NUMOFTRIANGLESIDES];
+			double triA[NUMOFTRIANGLESIDES];
+
+			assignTriangleAngles(triS, triA);
+
+			//if (triA[0] = 60)
+
+			double buffer = triA[0];
+
+			Assert::AreEqual(buffer, 60);
 		}
 	};
 }
