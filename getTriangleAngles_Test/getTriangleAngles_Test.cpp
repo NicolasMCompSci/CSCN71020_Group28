@@ -21,7 +21,7 @@ namespace getTriangleAnglesTest
 
 			double triA[NUMOFTRIANGLESIDES];
 
-			double expectedAngles[3] = {60, 60, 60};
+			double expectedAngles[3] = { 60.000000000000000, 60.000000000000000, 60.000000000000000 };
 
 			assignTriangleAngles(triS, triA);
 
@@ -33,11 +33,11 @@ namespace getTriangleAnglesTest
 		// Grae
 		TEST_METHOD(GFunctional01)
 		{
-			int triS[NUMOFTRIANGLESIDES] = { 4, 4, 2 };
+			int triS[NUMOFTRIANGLESIDES] = { 2, 4, 4 };
 
 			double triA[NUMOFTRIANGLESIDES];
 
-			double expectedAngles[3] = { 28.955, 75.522, 75.522 };
+			double expectedAngles[3] = { 28.955024371857938, 75.522487814065101, 75.5224878140651 };
 
 			assignTriangleAngles(triS, triA);
 
