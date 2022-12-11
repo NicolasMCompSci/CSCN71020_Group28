@@ -189,25 +189,5 @@ namespace FourPointsFunctionalityTest
 
 			Assert::IsTrue(checkIfRectangleByPoints(one, two, three, four));
 		}
-
-		TEST_METHOD(GException01)
-		{
-			// check if gives true to with negitive number input that result in a sqaure
-			POINT one, two, three, four;
-
-			one.x = -1;
-			one.y = -1;
-
-			two.x = -1;
-			two.y = 4;
-
-			three.x = 4;
-			three.y = 4;
-
-			four.x = 4;
-			four.y = -1;
-
-			Assert::IsTrue(checkIfRectangleByPoints(one, two, three, four));
-		}
 	};
 }
