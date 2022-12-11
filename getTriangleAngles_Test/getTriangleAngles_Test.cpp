@@ -27,9 +27,9 @@ namespace getTriangleAnglesTest
 
 			assignTriangleAngles(triS, triA);
 
-			triA[0] = triAInt[0];
-			triA[1] = triAInt[1];
-			triA[2] = triAInt[2];
+			triAInt[0] = triA[0];
+			triAInt[1] = triA[1];
+			triAInt[2] = triA[2];
 
 			Assert::AreEqual(triAInt[0], expectedAngles[0]);
 			Assert::AreEqual(triAInt[1], expectedAngles[1]);
