@@ -33,7 +33,7 @@ namespace getTriangleAnglesTest
 		// Grae
 		TEST_METHOD(GFunctional01)
 		{
-			int triS[NUMOFTRIANGLESIDES] = { 2, 2, 1 };
+			int triS[NUMOFTRIANGLESIDES] = { 4, 4, 2 };
 
 			double triA[NUMOFTRIANGLESIDES];
 
