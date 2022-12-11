@@ -179,7 +179,7 @@ namespace TypeOfTriangleFunctionalityTest
 		}
 
 		//Grae
-		TEST_METHOD(GFunctional07)
+		TEST_METHOD(GFunctional08)
 		{
 			// check if result = expected to input that result in "Scalene triangle"
 			char* result = analyzeTriangle(3, 2, 1);
@@ -187,7 +187,7 @@ namespace TypeOfTriangleFunctionalityTest
 		}
 
 		//Grae
-		TEST_METHOD(GFunctional07)
+		TEST_METHOD(GFunctional09)
 		{
 			// check if result = expected to input that result in "Scalene triangle"
 			char* result = analyzeTriangle(1, 2, 3);
@@ -195,7 +195,7 @@ namespace TypeOfTriangleFunctionalityTest
 		}
 
 		//Grae
-		TEST_METHOD(GFunctional07)
+		TEST_METHOD(GFunctional10)
 		{
 			// check if result = expected to input that result in "Scalene triangle"
 			char* result = analyzeTriangle(2, 3, 1);
